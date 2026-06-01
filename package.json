@@ -1,0 +1,20 @@
+{
+  "name": "shopx",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ShopX full-stack ecommerce marketplace",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "build": "npm run build --workspace client",
+    "server": "npm run dev --workspace server",
+    "client": "npm run dev --workspace client",
+    "seed": "npm run seed --workspace server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
